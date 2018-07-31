@@ -24,6 +24,9 @@ RUN apt-get -y install mongodb-org-tools
 # Install Cron
 RUN apt-get -y install cron
 
+# Install curl
+RUN apt-get -y install curl
+
 COPY /dropbox_uploader /opt/dropbox_uploader
 COPY /scripts /opt/scripts
 RUN chmod -R +x /opt/scripts
