@@ -12,8 +12,8 @@ services:
       # - MONGODB_PASSWORD=${MONGODB_PASSWORD}
       # - MONGODB_AUTH_DATABASE=${MONGODB_AUTH_DATABASE}
       # - CRON_EXPRESSION=${CRON_EXPRESSION}
-      - LOCAL_PATH=${LOCAL_PATH}
-      - DESTINATION_PATH=${DESTINATION_PATH}
+      # - LOCAL_PATH=${LOCAL_PATH}
+      # - DESTINATION_PATH=${DESTINATION_PATH}
       - OAUTH_ACCESS_TOKEN=${OAUTH_ACCESS_TOKEN}
     image: thelebster/mongo-cron-backup
     hostname: mongo-cron-backup
@@ -22,4 +22,4 @@ services:
     # Uncomment if runs on the same host and you will be able to access mongo on 127.0.0.1:27017
     # network_mode: "host"
     volumes:
-      - ${LOCAL_PATH}:${DESTINATION_PATH}
+      - /var/mongo/backups:/var/mongo/backups

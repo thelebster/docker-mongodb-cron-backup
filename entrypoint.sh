@@ -15,7 +15,7 @@ set -e
 sed -i 's/$MONGODB_HOST/'"$MONGODB_HOST"'/g' /opt/scripts/backup.sh
 sed -i 's/$MONGODB_PORT/'"$MONGODB_PORT"'/g' /opt/scripts/backup.sh
 sed -i 's/$MONGODB_DATABASE/'"$MONGODB_DATABASE"'/g' /opt/scripts/backup.sh
-sed -i 's/$DESTINATION_PATH/'"$DESTINATION_PATH"'/g' /opt/scripts/backup.sh
+# sed -i 's/$DESTINATION_PATH/'"$DESTINATION_PATH"'/g' /opt/scripts/backup.sh
 
 if ( [ -z "${OAUTH_ACCESS_TOKEN}" ] );
 then
