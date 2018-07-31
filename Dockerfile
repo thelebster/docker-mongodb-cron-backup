@@ -24,6 +24,14 @@ RUN apt-get -y install mongodb-org-tools
 # Install Cron
 RUN apt-get -y install cron
 
+COPY /dropbox_uploader /opt/dropbox_uploader
+COPY /scripts /opt/scripts
+RUN chmod -R +x /opt/scripts
+
+COPY crontab /etc/cron.d/crontab
+RUN chmod 0644 /etc/cron.d/crontab
+RUN /usr/bin/crontab /etc/cron.d/crontab
+
 # Making the crontab file based on env vars and put to the cron directory
 COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh

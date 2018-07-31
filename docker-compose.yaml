@@ -14,6 +14,7 @@ services:
       - CRON_EXPRESSION=${CRON_EXPRESSION}
       - LOCAL_PATH=${LOCAL_PATH}
       - DESTINATION_PATH=${DESTINATION_PATH}
+      - OAUTH_ACCESS_TOKEN=${OAUTH_ACCESS_TOKEN}
     image: thelebster/mongo-cron-backup
     hostname: mongo-cron-backup
     container_name: mongo-cron-backup
