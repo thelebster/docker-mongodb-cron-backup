@@ -11,4 +11,4 @@
 # Redirecting the cron's commands output into the docker stdout and stderr
 # which are located respectively in /proc/1/fd/1 and /proc/1/fd/2
 
-* * * * * . /root/.bash_profile; /bin/bash /opt/scripts/backup.sh > /proc/1/fd/1 2>/proc/1/fd/2
+* * * * * /bin/bash /opt/scripts/backup.sh > /proc/1/fd/1 2>/proc/1/fd/2
