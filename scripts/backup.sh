@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+env >> /etc/environment
+
 DATE="$(date +"%m_%d_%Y-%H%M%S")"
 
 DROPBOX_UPLOADER=/opt/dropbox_uploader/dropbox_uploader.sh

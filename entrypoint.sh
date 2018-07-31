@@ -1,8 +1,6 @@
 #!/bin/sh
 set -e
 
-env >> /etc/environment
-
 if ( [ -z "${OAUTH_ACCESS_TOKEN}" ] );
 then
   echo 'Access token is required.'
